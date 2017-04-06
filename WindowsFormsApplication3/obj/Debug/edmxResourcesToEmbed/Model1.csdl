@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="reassistModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="empreassist">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="FName" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="LName" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="MName" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Gender" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="MothersMaiden" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="FathersName" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="ContactNumber" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="SSSNumber" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="PhilhealthNumber" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="PagibigNumber" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="TinNumber" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="WithholdingTax" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="PresentAddress" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="PermanentAddress" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="NameEmergancyContactPerson" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="ContactEmgerncyPerson" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="reassistemp" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="empreassists" EntityType="Self.empreassist" />
+    <FunctionImport Name="spGetEmployee" ReturnType="Collection(reassistModel.spGetEmployee_Result)" />
+  </EntityContainer>
+  <ComplexType Name="spGetEmployee_Result">
+    <Property Type="String" Name="LName" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="FName" Nullable="true" MaxLength="10" />
+  </ComplexType>
+</Schema>

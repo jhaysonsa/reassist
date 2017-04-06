@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="reassistModelStoreContainer" CdmEntityContainer="reassistemp">
+    <EntitySetMapping Name="empreassists">
+      <EntityTypeMapping TypeName="reassistModel.empreassist">
+        <MappingFragment StoreEntitySet="empreassist">
+          <ScalarProperty Name="ContactEmgerncyPerson" ColumnName="ContactEmgerncyPerson" />
+          <ScalarProperty Name="NameEmergancyContactPerson" ColumnName="NameEmergancyContactPerson" />
+          <ScalarProperty Name="PermanentAddress" ColumnName="PermanentAddress" />
+          <ScalarProperty Name="PresentAddress" ColumnName="PresentAddress" />
+          <ScalarProperty Name="WithholdingTax" ColumnName="WithholdingTax" />
+          <ScalarProperty Name="TinNumber" ColumnName="TinNumber" />
+          <ScalarProperty Name="PagibigNumber" ColumnName="PagibigNumber" />
+          <ScalarProperty Name="PhilhealthNumber" ColumnName="PhilhealthNumber" />
+          <ScalarProperty Name="SSSNumber" ColumnName="SSSNumber" />
+          <ScalarProperty Name="ContactNumber" ColumnName="ContactNumber" />
+          <ScalarProperty Name="FathersName" ColumnName="FathersName" />
+          <ScalarProperty Name="MothersMaiden" ColumnName="MothersMaiden" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FName" ColumnName="FName" />
+          <ScalarProperty Name="LName" ColumnName="LName" />
+          <ScalarProperty Name="MName" ColumnName="MName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="spGetEmployee" FunctionName="reassistModel.Store.spGetEmployee">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="reassistModel.spGetEmployee_Result">
+          <ScalarProperty Name="LName" ColumnName="LName" />
+          <ScalarProperty Name="FName" ColumnName="FName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

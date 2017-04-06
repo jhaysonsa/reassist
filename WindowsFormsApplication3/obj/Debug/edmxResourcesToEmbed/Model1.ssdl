@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="reassistModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="empreassist">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="FName" Type="nchar" MaxLength="10" />
+    <Property Name="LName" Type="nchar" MaxLength="10" />
+    <Property Name="MName" Type="nchar" MaxLength="10" />
+    <Property Name="Gender" Type="nchar" MaxLength="10" />
+    <Property Name="MothersMaiden" Type="nchar" MaxLength="10" />
+    <Property Name="FathersName" Type="nchar" MaxLength="10" />
+    <Property Name="ContactNumber" Type="nchar" MaxLength="10" />
+    <Property Name="SSSNumber" Type="nchar" MaxLength="10" />
+    <Property Name="PhilhealthNumber" Type="nchar" MaxLength="10" />
+    <Property Name="PagibigNumber" Type="nchar" MaxLength="10" />
+    <Property Name="TinNumber" Type="nchar" MaxLength="10" />
+    <Property Name="WithholdingTax" Type="nchar" MaxLength="10" />
+    <Property Name="PresentAddress" Type="nchar" MaxLength="10" />
+    <Property Name="PermanentAddress" Type="nchar" MaxLength="10" />
+    <Property Name="NameEmergancyContactPerson" Type="nchar" MaxLength="10" />
+    <Property Name="ContactEmgerncyPerson" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <Function Name="spGetEmployee" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="reassistModelStoreContainer">
+    <EntitySet Name="empreassist" EntityType="Self.empreassist" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
